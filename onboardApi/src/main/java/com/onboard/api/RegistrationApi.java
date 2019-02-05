@@ -1,5 +1,6 @@
 package com.onboard.api;
 
+import javax.validation.Valid;
 import javax.ws.rs.core.MediaType;
 
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,6 @@ public interface RegistrationApi {
 			consumes = MediaType.APPLICATION_JSON, 
 			produces = MediaType.APPLICATION_JSON
 	)
-	ResponseEntity<?> createRegistration(@RequestBody RegistrationRequest registrationRequest);
+	ResponseEntity<?> createRegistration(@Valid @RequestBody RegistrationRequest registrationRequest);
 	
 }

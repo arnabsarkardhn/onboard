@@ -11,11 +11,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegistrationRequest {
 
 	@JsonProperty("name")
-	@NotNull
+	@NotNull( message = "Please provide name" )
 	private String name;
 	
 	@JsonProperty("email")
-	@NotNull
+	@NotNull( message = "Please provide email id" )
 	private String email;
 	
 
